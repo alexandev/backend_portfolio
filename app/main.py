@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 
-from app.api.v1.routers.posts import router as v1_router
+from app.api.routers.posts import router as posts_router
 from app.config import settings
 
 app = FastAPI(
@@ -9,7 +9,7 @@ app = FastAPI(
     openapi_url="/api/openapi.json",
 )
 
-app.include_router(v1_router, prefix="/api")
+app.include_router(posts_router, prefix="/api")
 
 # import time
 # from uuid import UUID

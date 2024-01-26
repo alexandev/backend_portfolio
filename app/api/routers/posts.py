@@ -8,7 +8,7 @@ from app.api import schemas
 from app.database import models as db_models
 from app.database.session import get_db_session
 
-router = APIRouter(prefix="/v1/posts", tags=["v1"])
+router = APIRouter(prefix="/posts", tags=["Posts"])
 
 
 @router.get("", status_code=status.HTTP_200_OK)
